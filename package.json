@@ -14,7 +14,8 @@
   },
   "scripts": {
     "pretest": "rm -rf allure-results",
-    "test": "wdio ./test/wdio.e2e.conf.js"
+    "test": "wdio ./test/wdio.e2e.conf.js",
+    "report": "allure generate allure-results -o allure-report && allure report open -o allure-report -p 8080"
   },
   "keywords": [
     "allure",
