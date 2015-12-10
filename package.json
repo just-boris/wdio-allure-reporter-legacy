@@ -13,7 +13,8 @@
     "lib": "./lib"
   },
   "scripts": {
-    "test": "wdio wdio.e2e.conf.js"
+    "pretest": "rm -rf allure-results",
+    "test": "wdio ./test/wdio.e2e.conf.js"
   },
   "keywords": [
     "allure",
@@ -30,6 +31,6 @@
     "eslint": "^1.4.1",
     "wdio-dot-reporter": "0.0.4",
     "wdio-jasmine-framework": "just-boris/wdio-jasmine-framework#npm",
-    "webdriverio": "github:just-boris/webdriverio#v4.0"
+    "webdriverio": "github:just-boris/webdriverio#npm"
   }
 }

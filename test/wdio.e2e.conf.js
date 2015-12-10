@@ -1,3 +1,5 @@
+var AllureReporter = require('../');
+
 exports.config = {
 
     specs: [
@@ -7,21 +9,19 @@ exports.config = {
     capabilities: [{
         browserName: 'firefox'
     }],
+
     logLevel: 'result',
     coloredLogs: true,
 
-    screenshotPath: './errorShots/',
-
     baseUrl: 'http://yandex.com',
-    waitforTimeout: 10000,
+    waitforTimeout: 3000,
 
     framework: 'jasmine',
 
-    reporter: 'dot',
-
+    reporter: [AllureReporter],
+    reporterOptions: {},
 
     jasmineNodeOpts: {
         defaultTimeoutInterval: 10000
-        // expectationResultHandler: function(passed, assertion) {}
     }
 };
